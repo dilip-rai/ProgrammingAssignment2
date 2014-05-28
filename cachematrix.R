@@ -42,7 +42,7 @@ cacheSolve <- function(x, ...) {
   
   ## if stored inverse is null, then compute the matrix inverse and store it.
   if (is.null(inv)) {
-    inv <- solve(x$get())
+    inv <- solve(x$get(), ...)
     x$setinverse(inv)
   }
   ## Return the matrix inverse
